@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: psych-clinic
+  profiles:
+    active: dev
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+
+
+server:
+  port: 8080
+  error:
+    include-message: always
+
+jwt:
+  secret: ${JWT_SECRET:change-me-in-production-min-32-chars-long-key}
+  issuer: clinic-psych
+  audience: clinic-users
+  validity-ms: 86400000
+
+zarinpal:
+  merchant-id: ${ZARINPAL_MERCHANT_ID:XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}
+  sandbox: ${ZARINPAL_SANDBOX:true}
+  callback-base: ${PUBLIC_BASE_URL:http://localhost:8080}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+  api-docs:
+    path: /v3/api-docs
