@@ -18,18 +18,18 @@ class InstructionController(private val svc: InstructionService) {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    @PreAuthorize("hasAuthority('DOCTOR')")
+    @PreAuthorize("hasAnyAuthority('DOCTOR','ADMIN')")
     @Operation(summary = "ثبت دستور کار جدید (فقط دکتر)")
     fun create(@Valid @RequestBody req: CreateInstructionRequest): InstructionResponse =
         svc.create(currentUserId(), req)
 
     @GetMapping("/my")
-    @PreAuthorize("hasAuthority('DOCTOR')")
+    @PreAuthorize("hasAnyAuthority('DOCTOR','ADMIN')")
     @Operation(summary = "دستورات ثبت‌شده توسط من (دکتر)")
     fun my(): List<InstructionResponse> = svc.myInstructions(currentUserId())
 
     @GetMapping("/assigned")
-    @PreAuthorize("hasAuthority('SECRETARY')")
+    @PreAuthorize("hasAnyAuthority('SECRETARY','ADMIN')")
     @Operation(summary = "دستورات اختصاص‌یافته به من (منشی)")
     fun assigned(): List<InstructionResponse> = svc.assignedToMe(currentUserId())
 
