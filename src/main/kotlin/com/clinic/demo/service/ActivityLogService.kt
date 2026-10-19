@@ -5,7 +5,7 @@ package com.clinic.demo.service
 import com.clinic.demo.domain.*
 import com.clinic.demo.domain.Entities.ActivityLog
 import com.clinic.demo.repository.*
- import org.springframework.stereotype.Service
+import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
 @Service

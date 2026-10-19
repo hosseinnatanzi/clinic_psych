@@ -1,8 +1,8 @@
 package com.clinic.demo.service
 
- import com.clinic.demo.domain.*
- import com.clinic.demo.domain.Entities.*
- import com.clinic.demo.dto.*
+import com.clinic.demo.domain.*
+import com.clinic.demo.domain.Entities.*
+import com.clinic.demo.dto.*
 import com.clinic.demo.exception.ApiException
 import com.clinic.demo.repository.*
 import org.springframework.http.HttpStatus

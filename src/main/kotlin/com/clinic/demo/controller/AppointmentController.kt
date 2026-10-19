@@ -3,7 +3,7 @@ package com.clinic.demo.controller
 
 import com.clinic.demo.dto.*
 import com.clinic.demo.security.*
- import com.clinic.demo.service.AppointmentService
+import com.clinic.demo.service.AppointmentService
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.http.HttpStatus

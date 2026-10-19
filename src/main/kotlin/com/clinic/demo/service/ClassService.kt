@@ -4,8 +4,8 @@ import com.clinic.demo.domain.Entities.ClassEntity
 import com.clinic.demo.domain.Entities.ClassRegistration
 
 
- import com.clinic.demo.domain.*
- import com.clinic.demo.dto.*
+import com.clinic.demo.domain.*
+import com.clinic.demo.dto.*
 import com.clinic.demo.exception.ApiException
 
 import com.clinic.demo.repository.*
